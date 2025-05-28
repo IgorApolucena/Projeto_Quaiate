@@ -1,0 +1,41 @@
+sistema_mensagens/
+│
+├── 📁 assets/              # Arquivos estáticos (CSS, JS, imagens)
+│   ├── 📁 css/
+│   │   └── estilo.css      # Estilos gerais (opcional usar Bootstrap)
+│   └── 📁 js/
+│       └── scripts.js      # JavaScript (se necessário)
+│
+├── 📁 config/              # Configurações do sistema
+│   └── database.php        # Conexão com o banco de dados
+│
+├── 📁 includes/            # Funções e componentes reutilizáveis
+│   ├── auth.php            # Verificação de login/sessão
+│   ├── header.php          # Cabeçalho comum
+│   ├── footer.php          # Rodapé comum
+│   └── functions.php       # Funções auxiliares (ex: sanitizar inputs)
+│
+├── 📁 admin/               # Páginas exclusivas do administrador
+│   ├── usuarios/
+│   │   ├── listar.php      # Listar todos os usuários (CRUD)
+│   │   ├── editar.php      # Editar usuário
+│   │   └── excluir.php     # Excluir usuário (lógico ou físico)
+│   │   
+│   └── mensagens_broadcast.php  # Enviar mensagens para todos
+│
+├── 📁 usuario/             # Páginas do usuário comum
+│   ├── mensagens/
+│   │   ├── enviar.php      # Enviar mensagem (para admin/contatos)
+│   │   ├── recebidas.php   # Visualizar mensagens recebidas
+│   │   └── enviadas.php    # Visualizar mensagens enviadas
+│   └── contatos/
+│   │    ├── listar.php      # Ver contatos aceitos/pendentes
+│   │    ├── aceitar.php     # Aceitar solicitação de contato
+│   │    └── solicitar.php   # Enviar solicitação para outro usuário
+|   ├── recuperar_senha.php  # Recuperar a senha por email
+|   └── criar.php            # Adicionar novo usuário
+│
+├── 📄 index.php            # Página inicial (redireciona para login/dashboard)
+├── 📄 login.php            # Página de login
+├── 📄 logout.php           # Encerra a sessão
+└── 📄 dashboard.php        # Dashboard após login (redireciona para admin/usuario)
