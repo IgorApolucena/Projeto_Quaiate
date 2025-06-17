@@ -10,7 +10,6 @@ $resultado = $conn->query($verificar);
 
 if ($resultado->num_rows > 0){
     echo"Login efetudado com sucesso!";
-    header("Refresh: 3; url= /criar.html");
 }else{
     echo"Ops! Algo deu errado, tente novamente!";
 }
