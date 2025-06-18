@@ -1,5 +1,5 @@
 <?php
-include "config/database.php";
+include "../config/database.php";
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
