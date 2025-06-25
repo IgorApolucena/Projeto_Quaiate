@@ -5,6 +5,7 @@ include "../config/database.php";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+$tipo = 2;
 
 /* Cria uma consulta no banco de dados para verificar o email digitado com o email do banco de dados */
 $emailbd = $conn->query("SELECT * FROM usuarios WHERE email = '$email'");
@@ -16,8 +17,8 @@ if ($emailbd->num_rows > 0){
     header("Refresh: 3; url=../criar.html");
 }else{
     /* Criptografa a senha do usuário */
-    $senha_criptografada = password_hash($senha, PASSWORD_BCRYPT);
-    $conn->query("INSERT INTO usuarios (id, nome, email, senha) VALUES (NULL, '$nome', '$email', '$senha_criptografada')");
+    // $senha_criptografada = password_hash($senha, PASSWORD_BCRYPT);
+    $conn->query("INSERT INTO usuarios (id, nome, email, senha, tipo) VALUES (NULL, '$nome', '$email', '$senha', '$tipo')");
     echo "Dados Salvos!";
     header("Refresh: 3; url=../login.html");
 }
