@@ -59,17 +59,17 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `tipo` enum('admin','comum') NOT NULL DEFAULT 'comum',
-  `status` enum('ativo','inativo') NOT NULL DEFAULT 'ativo',
+  `tipo` int NOT NULL DEFAULT '0',
   `data_criacao` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela sistema_mensagens.usuarios: ~2 rows (aproximadamente)
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `tipo`, `status`, `data_criacao`) VALUES
-	(1, 'Zubu', 'zubu@etec.com', '$2y$10$QbvS3M2M46GQdJoPA1cD4ui7c7aqqDcndSFqGCYYJ42kRABHeNIdq', 'comum', 'ativo', '2025-06-25 00:30:22'),
-	(2, 'a', 'sla@e.com', '$2y$10$OEK6j1pJJSL1Z81dJJAOyu/amw.xE.8X6PZf.A1iyhkD1ZXDPtXMy', 'comum', 'ativo', '2025-06-25 00:40:01');
+-- Copiando dados para a tabela sistema_mensagens.usuarios: ~3 rows (aproximadamente)
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `tipo`, `data_criacao`) VALUES
+	(2, 'Igor Apolucena Santos', 'teste@teste.com', '12344', 1, '2025-06-25 02:20:43'),
+	(3, 'teste', 'teste2@teste.com', '1234', 2, '2025-06-25 02:23:12'),
+	(4, 'teste2', 'teste3@teste.com', '1234', 2, '2025-06-25 02:26:29');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

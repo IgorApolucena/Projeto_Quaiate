@@ -16,11 +16,9 @@ if ($emailbd->num_rows > 0){
     echo "Usuário já existente!";
     header("Refresh: 3; url=../criar.html");
 }else{
-    /* Criptografa a senha do usuário */
-    // $senha_criptografada = password_hash($senha, PASSWORD_BCRYPT);
     $conn->query("INSERT INTO usuarios (id, nome, email, senha, tipo) VALUES (NULL, '$nome', '$email', '$senha', '$tipo')");
     echo "Dados Salvos!";
-    header("Refresh: 3; url=../login.html");
+    header("Refresh: 3; url=../html/login.html");
 }
 
 ?>
