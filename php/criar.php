@@ -18,7 +18,7 @@ if ($emailbd->num_rows > 0){
 }else{
     $conn->query("INSERT INTO usuarios (id, nome, email, senha, tipo) VALUES (NULL, '$nome', '$email', '$senha', '$tipo')");
     echo "Dados Salvos!";
-    header("Refresh: 3; url=../html/login.html");
+    header("Location: cadastro_sucesso.php?sucesso=1");
 }
 
 ?>
