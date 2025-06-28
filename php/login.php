@@ -17,7 +17,7 @@ if ($resultado->num_rows > 0 and $tipo == 2) {
     $_SESSION['nome_session'] = $nome;
 
     // header('Location: dashboard.php');
-    header("Refresh: 2; url=dashboard.php");
+    header("Refresh: 2; url=../html/dashboard.html");
 }else{
     echo"Ops! Algo deu errado, tente novamente!";
     header("Refresh: 2; url=../html/login.html");
