@@ -18,6 +18,9 @@ if ($resultado->num_rows > 0 and $tipo == 2) {
 
     // header('Location: dashboard.php');
     header("Refresh: 2; url=../html/dashboard.html");
+}elseif ($resultado->num_rows > 0 and $tipo == 1){
+    echo "Sessão Admin logada com sucesso!";
+    header("Refresh: 2; url=logado.php");
 }else{
     echo"Ops! Algo deu errado, tente novamente!";
     header("Refresh: 2; url=../html/login.html");
